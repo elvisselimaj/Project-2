@@ -3,39 +3,49 @@
 <head>
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+  charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+<script src="../static/js/jquery.mapael.js" charset="utf-8"></script>
+<script src="../static/js/usa_states.js" charset="utf-8"></script>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/css/test.css">
+
 <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" /> -->
 <!-- <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script> -->
-<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-<link rel="stylesheet" type="text/css" href="../static/css/agency.css">
 
+
+<title>Herd Immunity</title>
 </head>
 
-<body>
+<body style="background-color: skyblue">
 
-<nav>
-  <div class="navbar-header">
-    <a class="navbar-brand" href="" style="padding-left:25px">
-      VACCINES ARE YOUR BEST SHOT
-    </a>
-  </div>
-  <div class="collapse navbar-collapse">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item">
-        <a class="nav-link" href="#information">Common Childhood Diseases</a>
-      </li>
-      <li class="menu">
-        <a target="#_blank" href="https://github.com/luluxu9466/childhood-immunizations" style="padding-right:20px">
-          <img width="25px" src="../static/images/github.svg">
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav>
+    <div class="navbar-header" >
+      <a class="navbar-brand" href="http://childhood-immunizations.herokuapp.com/" style="padding-left:25px; ">
+        VACCINES ARE YOUR BEST SHOT
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="maps">SHOTS SHOTS SHOTS! (Maps)</a>
+        </li>
+        <li class="menu">
+          <a target="#_blank" href="https://github.com/luluxu9466/childhood-immunizations" style="padding-right:25px">
+            <img width="25px" src="../static/images/github.svg">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 <div class="jumbotron text-center" style="background-image: url(../static/images/herd.png);">
   <div class="inner">
   <h1>VACCINES ARE YOUR BEST SHOT</h1>
-  <h3 class="h3-white">Herd immunizations for a healthier society</h3>
+  <h2 style="text-align: center; color: snow;">Herd immunizations for a healthier society</h2>
 </div>
 </div>
 
@@ -49,13 +59,13 @@
 
   <!-- Mumps picture with overlay text -->
   <div class="col-lg-4">
-    <h2>
+    <h2 style="color: snow;">
       Mumps
     </h2>
   <div class="img-container">
     <img src="../static/images/mumps.jpg" alt="Mumps" class = "image" style="width: 33vw; height: 35vw;"> 
     <div class="overlay"  style="width: 33vw;padding: 5px;">
-      <div class="img-text" style="font-size: 1vw; width: 33vw;">
+      <div class="img-text" style="width: 33vw;">
         <p>
           <strong>What it is: </strong>
           Mumps is a highly contagious airborne virus and can be spread by an infected person coughing or sneezing and releasing tiny droplets of contaminated saliva that is inhaled by another person. 
@@ -75,13 +85,13 @@
 
    <!-- Measles picture with overlay text -->
    <div class="col-lg-4">
-    <h2>
+    <h2 style="color: snow;">
       Measles
     </h2>
   <div class="img-container">
     <img src="../static/images/measles.jpg" alt="Measles" class = "image" style="width: 33vw; height: 35vw">
     <div class="overlay" style="width: 33vw;padding: 5px;">
-      <div class="img-text" style="font-size: 1vw; width: 33vw;">
+      <div class="img-text" style="width: 33vw;">
         <p>
           <strong>What it is: </strong>
           Measles is a very contagious disease caused by a virus that is spread through the air when an infected person coughs or sneezes. 
@@ -103,7 +113,7 @@
 
   <!-- Pertusis picture with overlay text -->
   <div class="col-lg-4">
-    <h2>
+    <h2 style="color: snow;">
       Pertussis
     </h2>
     <div class="img-container">
@@ -113,7 +123,7 @@
 
           <p>
             <strong>What it is: </strong>
-            More commonly known as the “whooping cough”, pertussis is a highly contagious respiratory disease caused by the bacterium Bordetella pertussis causing uncontrollable violent coughing, vomiting, and apnea making it hard to breathe. 
+            More commonly known as the "whooping cough", pertussis is a highly contagious respiratory disease caused by the bacterium Bordetella pertussis causing uncontrollable violent coughing, vomiting, and apnea making it hard to breathe. 
             Recovery is possible but slow and can return with other respiratory infections for many months after the pertussis infection started. 
           </p>
           <p>
@@ -130,7 +140,8 @@
   </div>
 </div>
 
-<div class="jumbotron">
+<div class="jumbotron" style="background-color: skyblue" >
+  <h2 style="color: snow;">Vaccine Timelines</h2>
 <div class="row">
 
   <div class="col-lg-4">

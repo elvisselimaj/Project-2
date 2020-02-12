@@ -1,6 +1,5 @@
 from .app import db
 
-
 class Measles(db.Model):
     __tablename__ = 'Measles Data'
 
@@ -9,15 +8,22 @@ class Measles(db.Model):
     Counts = db.Column(db.Integer)
 
     def __repr__(self):
-        return '<Immunization %r>' % (self.States)
+        return '<State %r>' % (self.States)
+    
+    # def serialize(self):
+    #     return {
+    #         'id': self.id
+    #         'States': self.States, 
+    #         'Counts': self.Counts,
+    #     }
 
 class Vaccines(db.Model):
     __tablename__ = 'Vaccines'
 
     id = db.Column(db.Integer, primary_key=True)
-    State = db.Column(db.String(15))
-    'Measles cases (2019)' = db.Column(db.Integer)
-    'Mumps cases (2019)' = db.Column(db.Integer)
-    'Pertussis cases (2018)' = db.Column(db.Integer)
-    'Religious Exemption' = db.Column(db.String(10))
-    'Philosophical Exemption' = db.Column(db.String(10))
+    States = db.Column(db.String(15))
+    Measles_cases = db.Column(db.Integer)
+    Mumps_cases = db.Column(db.Integer)
+    Pertussis_cases = db.Column(db.Integer)
+    Religious_Exemption = db.Column(db.String(10))
+    Philosophical_Exemption = db.Column(db.String(10))

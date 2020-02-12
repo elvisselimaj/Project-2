@@ -23,7 +23,7 @@ body {
      font-family: 'Arial', serif;
      font-weight: bold;
      font-size: 50px;
-     color: whitesmoke;
+     color: snow;
  }
  
  h2 {
@@ -31,14 +31,14 @@ body {
      /* font-size: 30px; */
      /* text-align: center; */
      font-weight: bold;
-     color: rgb(235, 45, 31);
+     color: snow;
  }
  
  h3 {
      font-family: 'Arial', sans-serif;
      font-size: 20px;
      text-align: center;
-     color: rgb(34, 33, 33);
+     color: snow;
      line-height: 1.75em;
  }
  
@@ -84,7 +84,7 @@ body {
  /* ======================================
   Class Data
   ====================================== */
- 
+/*  
  .team-name {
      font-family: 'Arial', monospace !important;
      font-size: 24px;
@@ -101,7 +101,7 @@ body {
      display: block;
      margin: 10px;
      line-height: 2em;
- }
+ } */
  
  .button {
      background-color: rgb(194, 194, 194); 
@@ -195,14 +195,14 @@ body {
      background-color: whitesmoke;
  }
  
- .footer {
+ /* .footer {
      background-color:rgb(8, 9, 58);
      color:whitesmoke;
      font-family: 'Arial', sans-serif;
      font-size: 16px;
      text-align: center;
      padding: 20px;
- }
+ } */
  
  .form-group {
      background-color: rgba(255, 255, 255, .5);
@@ -280,7 +280,7 @@ body {
  
  /* Style the navbar */
  #navbar {
-   background-color: white;
+   background-color: blue;
    border-bottom: 1px;
    margin-bottom: 0px;
    position: fixed; /* Set the navbar to fixed position */
@@ -295,9 +295,9 @@ body {
    text-align: center;
    padding: 14px;
    text-decoration: none;
-   font-family: 'Arial, sans-serif;
+   font-family: 'Arial', sans-serif;
    font-size: 16px;
-   color: rgb(21, 124, 21);
+   color: red;
  }
  
  #radar {
@@ -445,23 +445,6 @@ body {
      flex: 1 0 300px;
  }
  
- /* 
- ######################
- Info box under gauges 
- ###################### 
- */
- .info-box {
-     padding: 15px;
-     margin: 8px;
-     background-color: #8d8e913b;
-     font-family: 'Arial', sans-serif;
-     text-align: center;
-     font-size: 16px;
-     color: rgb(34, 33, 33);
-     display: block;
-     line-height: 1.5em;
- }
- 
 
 /* Styling for hover image */
 .img-container {
@@ -504,5 +487,59 @@ body {
     font-size: 1vw; 
 }
 
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-/* stylin' */
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mapael .map {
+    position: relative;
+  }
+
+.mapael .mapTooltip {
+    position: absolute;
+    background-color: #fff;
+    -moz-opacity: 0.70;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 200px;
+    display: none;
+    color: #343434;
+  }
